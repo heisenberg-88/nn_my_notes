@@ -28,5 +28,13 @@ personal code snippets notes
     
      net.to(device)
     
+   
+# for ERROR TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
+
+& X[0] is a tensor then, just join .cpu() to the tensor
+    
+    import matplotlib.pyplot as plt
+    plt.imshow(X[0].cpu().view(28,28))
+    plt.show()
  
  
